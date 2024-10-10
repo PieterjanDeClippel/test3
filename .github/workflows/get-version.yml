@@ -16,10 +16,18 @@ jobs:
       packages: read
     
     steps:
-    - name: Get version
-      id: get_version
+    - name: Get version NPM
+      id: get_version_npm
       uses: MintPlayer/github-actions/get-npmjs-version@main
       with:
         package_name: "@mintplayer/ng-bootstrap"
     - name: Log version
-      run: echo ${{ steps.get_version.outputs.packageInfo }}
+      run: echo ${{ steps.get_version_npm.outputs.packageInfo }}
+    - name: Get version Github
+      id: get_version_gpr
+      uses: MintPlayer/github-actions/get-gpr-version@main
+      with:
+        package_name: "@mintplayer/ng-bootstrap"
+        package_type: "npm"
+    - name: Log version
+      run: echo ${{ steps.get_version_gpr.outputs.packageInfo }}
