@@ -17,7 +17,9 @@ jobs:
     
     steps:
     - name: Get version
+      id: get_version
       uses: MintPlayer/github-actions/get-npmjs-version@main
       with:
         package_name: "@mintplayer/ng-bootstrap"
-    
+    - name: Log version
+      run: echo ${{ steps.get_version.outputs.packageInfo }}
