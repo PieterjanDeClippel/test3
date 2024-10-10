@@ -16,6 +16,8 @@ jobs:
       packages: read
     
     steps:
+    - name: Print env
+      run: env | sort
     - name: Get version NPM
       id: get_version_npm
       uses: MintPlayer/github-actions/get-npmjs-version@main
