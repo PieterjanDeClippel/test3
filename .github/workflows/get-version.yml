@@ -23,5 +23,3 @@ jobs:
         package_name: "@mintplayer/ng-bootstrap"
     - name: Log version
       run: echo ${{ steps.get_version.outputs.packageInfo }}
-
-
