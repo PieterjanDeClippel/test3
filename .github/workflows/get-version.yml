@@ -1,0 +1,23 @@
+name: get-version
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+  
+    name: get-version
+    runs-on: ubuntu-latest
+    
+    permissions: 
+      contents: read
+      packages: read
+    
+    steps:
+    - name: Get version
+      uses: MintPlayer/github-actions/get-npmjs-version@main
+      with:
+        package_name: "@mintplayer/ng-bootstrap"
+    
