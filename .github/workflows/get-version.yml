@@ -24,3 +24,4 @@ jobs:
     - name: Log version
       run: echo ${{ steps.get_version.outputs.packageInfo }}
 
+
