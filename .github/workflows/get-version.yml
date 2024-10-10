@@ -29,6 +29,7 @@ jobs:
       with:
         package_name: "@mintplayer/ng-bootstrap"
         package_type: "npm"
+        token: ${{ github.token }}
     - name: Log version
       run: echo ${{ steps.get_version_gpr.outputs.packageInfo }}
 
