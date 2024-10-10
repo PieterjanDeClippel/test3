@@ -31,3 +31,4 @@ jobs:
         package_type: "npm"
     - name: Log version
       run: echo ${{ steps.get_version_gpr.outputs.packageInfo }}
+
